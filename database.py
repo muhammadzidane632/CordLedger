@@ -16,7 +16,7 @@ def init_db():
 ''')
     
 def add_transactions(user_id,trans_type, amount,description):
-    conn = sqlite3.connect('expense.db')
+    conn = sqlite3.connect('expenses.db')
     cursor = conn.cursor()
     cursor.execute('''
     INSERT INTO transactions (user_id,type,amount,description)
